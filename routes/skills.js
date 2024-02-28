@@ -8,6 +8,6 @@ router.get('/', skillsController.index); // Get /skills
 router.get('/new', skillsController.new); // Get /skills/new
 router.get('/:skill', skillsController.show); // Get skills/show
 router.post('/', skillsController.create);
-
+router.delete('/:skill', skillsController.delete);
 
 module.exports = router;

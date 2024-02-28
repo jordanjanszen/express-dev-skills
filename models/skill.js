@@ -8,6 +8,7 @@ module.exports = {
     getAll,
     getOne,
     push,
+    deleteOne,
 };
 
 function getAll () {
@@ -22,3 +23,9 @@ function getOne (id) {
 function push (skill) {
     myDevSkills.push(skill)
 };
+
+function deleteOne(id) {
+  id = parseInt(id);
+  const idx = myDevSkills.findIndex(skill => skill.id === id);
+  myDevSkills.splice(idx, 1);
+}

@@ -3,9 +3,15 @@
         <% myDevSkills.forEach(function(s) { %>
             <li>
             <a href=<%= `/skills/${s.skill}` %>><%= s.skill %></a>
+            <form action="/skills/<%= s.skill %>?_method=DELETE"
+                class="delete-form" method="POST">
+                <button type="submit">X</button>
+              </form>
             </li>
         <% }); %>
     </ul>
         <hr>
         <a href="/skills/new">ADD a new skill to the list</a>
+        
+
 <%- include('../partials/footer') %>
